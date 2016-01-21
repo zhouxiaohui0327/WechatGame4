@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding:0;
-    font-family: Arial, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", \5b8b\4f53, Helvetica, sans-serif;
+    font-family: "Comic Sans MS", "幼圆", "黑体", sans-serif;
 }
 #d-mask{
      background: #000;
@@ -27,7 +27,7 @@
 }
 .d-mask1{
     background: #000;
-    opacity: .5;
+    opacity: .7;
     left: 0;
     top: 0;
     width: 100%;
@@ -114,15 +114,24 @@
     width: 100%;
     text-align: center;
 }
+
+.tanchu{
+    width:100%;
+    position: absolute;
+    top: 115px;
+    z-index: 1999;
+}
 @media screen and (min-width: 320px){
     .btn-box{bottom:42px;}
     .guize-wrap{top:75px;}
     .guize_text{width: 80%;line-height: 25px;height: 125px}
+    .tanchu{top: 115px;}
 }
 @media screen and (min-width: 360px){
     .btn-box{bottom:48px;}
     .guize-wrap{top:80px;}
     .guize_text{width: 75%;line-height: 30px;height: 150px}
+    .tanchu{top: 125px;}
 }
 @media screen and (min-width: 375px){
     .btn-box{bottom:50px;}
@@ -138,9 +147,222 @@
     .btn-box{bottom:54px;}
     .guize-wrap{top:90px;}
     .guize_text{width: 7%;line-height: 30px;height: 180px}
+    .tanchu{top: 135px;}
 }
 @media screen and (min-width: 600px){
     .btn-box{bottom:80px;}
     .guize-wrap{top:130px;}
     .guize_text{width: 7%;line-height: 30px;height: 240px}
 }
+
+
+
+.info-wrap{
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    left: 0;
+}
+.info_box{
+    width: 80%;
+    background-color: #dd212f;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 2px black;
+    position: relative;
+}
+#info_form{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.info{
+    width: 100%;
+    text-align: center;
+}
+.info input{
+    width: 80%;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-radius: 6px;
+    padding-left: 20px;
+    color: #fff;
+    background-color: #9b010b;
+    border: none;
+    box-shadow: 2px 2px 5px black inset;
+    -moz-box-shadow: 2px 2px 5px black inset;
+    -webkit-box-shadow:  2px 2px 5px black inset;
+}
+.info input:focus{
+    outline: none;
+}
+input::-webkit-input-placeholder {
+    color: #fff !important;
+    　　}
+input:-moz-placeholder {
+    color: #fff !important;
+    　　}
+input::-moz-placeholder {
+    color: #fff !important;
+    　　}
+input:-ms-input-placeholder {
+    color: #fff !important;
+    　　}
+
+.choose_head{
+    font-size: 25px;
+    color: #FFF;
+    background-color: #bc1e2d;
+    width: 80%;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.hint{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.place_box{
+    width:96%;
+    background-color: #e7646c;
+    margin:0 auto;
+    border: 3px solid #9f151d;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-align: center;
+}
+.chose_text{
+    color:#fff;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+    line-height: 30px;
+}
+.place_row{
+    list-style:none;
+}
+.place_row li{
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 16px;
+}
+.sureBtn{
+    text-decoration: none;
+    background-color: yellow;
+    width: 80px;
+    display: inline-block;
+    line-height: 26px;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-top: 2px;
+    border: none;
+}
+.active{
+    background-color: #bc1e2d;
+    color: #fff;
+}
+.success_bg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+.monkey_pic{
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.information{
+    position: absolute;
+    bottom:140px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+}
+.information p{
+    line-height: 30px;
+}
+.last_monkey{
+    position: absolute;
+    width: 100%;
+    bottom: 45px;
+}
+#monkey-sure{
+    width: 65px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (min-width:320px){
+
+}
+@media screen and (min-width:360px){
+    .info-wrap{top:88px}
+    .info input{line-height: 32px;}
+    .hint{font-size: 15px;}
+    .chose_text{line-height: 32px;}
+    .place_box{margin-top:15px;}
+    .place_row li{line-height: 35px;height: 35px;}
+    .information{bottom: 150px;}
+    .information p{line-height: 33px;}
+    .last_monkey{bottom:50px}
+    #monkey-sure{width:70px;}
+}
+@media screen and (min-width:375px){
+    .info-wrap{top:90px}
+    .info input{line-height: 35px;}
+    .hint{font-size: 16px;}
+    .chose_text{line-height: 35px;}
+    .place_box{margin-top:15px;}
+    .place_row li{line-height: 35px;height: 35px;}
+    .information{bottom: 160px;}
+    .information p{line-height: 33px;}
+    .last_monkey{bottom:55px}
+    #monkey-sure{width:70px;}
+}
+@media screen and (min-width:384px){
+    .info-wrap{top:93px}
+    .info input{line-height: 38px;margin-bottom: 20px}
+    .hint{font-size: 16px;}
+    .chose_text{line-height: 37px;}
+    .place_box{margin-top:15px;}
+    .place_row li{line-height: 37px;height: 37px;}
+    .sureBtn{width: 90px;line-height: 30px}
+    .information{bottom: 168px;}
+    .information p{line-height: 35px;}
+    .last_monkey{bottom:55px}
+    #monkey-sure{width:70px;}
+}
+@media screen and (min-width:414px){
+    .info-wrap{top:98px}
+    .info input{line-height: 40px;margin-bottom: 22px}
+    .hint{font-size: 18px;}
+    .chose_text{line-height: 40px;}
+    .place_box{margin-top:15px;}
+    .place_row li{line-height: 39px;height: 39px;font-size: 18px}
+    .sureBtn{width: 100px;line-height: 35px;font-size: 22px}
+    .information{bottom: 180px;font-size: 25px;}
+    .information p{line-height: 35px;}
+    .last_monkey{bottom:60px}
+    #monkey-sure{width:80px;}
+}
+@media screen and (min-width:600px){
+    .info-wrap{top:145px}
+    .info input{line-height: 50px;margin-bottom: 22px}
+    .hint{font-size: 25px;}
+    .chose_text{line-height: 50px;}
+    .place_box{margin-top:25px;}
+    .place_row li{line-height: 50px;height: 50px;font-size: 22px}
+    .sureBtn{width: 100px;line-height: 35px;font-size: 22px}
+    .information{bottom: 270px;font-size: 40px;}
+    .information p{line-height: 55px;}
+    .last_monkey{bottom:85px}
+    #monkey-sure{width:120px;}
+}
+

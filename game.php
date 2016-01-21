@@ -23,13 +23,15 @@
 
 <div class="wrap" style="background: url('./images/gameBg.jpg')center;background-size: 100% 100%">
 
-    <div class="tanchu over" style="width:100%;position: absolute;top: 115px;">                                                                                <!--游戏结束弹出框-->
-        <img src="./images/over.png" style="width: 80%;margin: 0 auto;display:block" alt=""/>
+    <div class="tanchu over" style="display: none">                                                                                <!--游戏结束弹出框-->
+        <img src="./images/over.png" id="shareBtn" style="width: 80%;margin: 0 auto;display:block" alt=""/>
+    </div>
+    <div class="tanchu success" style="display: none">                                                                                <!--游戏中奖弹出框-->
+        <img src="./images/zhongjiang.png" id="successBtn" style="width: 80%;margin: 0 auto;display:block" alt=""/>
     </div>
 
-
     <div class="d-mask1 share_text" style="position: absolute;width: 100%;z-index: 2000;display: none">         <!--分享弹出-->
-        <img src="./images/share_text.png" style="width:100%" alt=""/>
+        <img src="images/share_text.png" id="share_textBtn" style="width:100%" alt=""/>
     </div>
 
     <div class="fall" style="position: absolute;display: none">
@@ -39,12 +41,12 @@
     <p class="score">score:<span style="color:yellow">880</span></p>
     <p class="time">time:<span style="color:yellow">90</span></p>
 
-    <div class="lanzi_wrap">                               <!--篮子-->
+    <div class="lanzi_wrap">                                                                                    <!--篮子-->
         <img src="./images/lanzi.png" style="width: 25%" alt=""/>
     </div>
 
-    <div class="d-mask" style="display: none">            <!--游戏指导-->
-        <img src="./images/youxishuoming.png" class="game_state" alt=""/>
+    <div class="d-mask" style="display: block">                                                                 <!--游戏指导-->
+        <img src="./images/youxishuoming1.png" class="game_state" alt=""/>
         <div class="startBtn">
             <img src="images/youxikaishi.png" id="startBtn" style="width: 30%" alt=""/>
         </div>
@@ -67,6 +69,17 @@
            $('.fall').animate({top:xx},2000);
        }
     });
+
+    $('#shareBtn').click(function(){
+        $('.share_text').css({display:"block"})
+    });
+
+    $("#successBtn").click(function(){
+        $(".success").css({display:"none"})
+    })
+    $('#share_textBtn').click(function(){
+        $(".d-mask1").css({display:"none"})
+    })
 
 
 
